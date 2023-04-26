@@ -9,44 +9,64 @@ using std::cout; using std::endl; using std::cerr;
 template<typename T>
 class SmartPointer
 {
-priavte:
+private:
     T* value;
     int count;
 public:
-    SmartPointer(T* value, int count) : value(value), count(count)
+    SmartPointer(T* value = nullptr) : value(value)
     {
-        this = new T(value);
-    }
-    ~SmartPointer(){}
-
-    int count() const
-    {
-        cout << count;
+        if (value != nullptr)
+        {
+            count = 1;
+        }
+        else count = 0;
     }
 
-    void reset()
+    SmartPointer(const SmartPointer<T>& newptr)     // конструктор копирования
     {
+        value = newptr.value;
+        count = newptr.count;
+        if(value != nullptr) 
+        {
+            count++;        // если поинтер не нулевой то увеличить каунт
+        }
+    }
 
+    ~SmartPointer()     // деструктор с проверкой на кол-во
+    {
+        if(value != nullptr)
+        {
+            count--;
+            if(count == 0) 
+            {
+                delete value;
+            }
+        }
+    }
+
+    int counter() const     // имя члена-переменной класса != имя метода класса (count count)
+    {
+        return count;
+    }
+
+    void reset(T* newptr = nullptr)
+    {
+        if(value != nullptr) 
+        {
+            count--;
+            if(count == 0) 
+            {
+                delete value;
+            }
+        }
+        value = newptr;
+        if (value != nullptr)
+        {
+            count = 1;
+        }
+        else count = 0;
     }
 
 };
 
-/*
-
-template <typename T>
-class smartptr
-{
-private:
-    int* count;
-    T* value;
-public:
-    smartptr();
-    void reset();
-    int count() const;
-    ~smartptr();
-};
-
-
-*/
-
-#endif SMART_POINTER_HPP
+#endif // SMART_POINTER_HPP
