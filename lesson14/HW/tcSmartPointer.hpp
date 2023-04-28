@@ -22,24 +22,24 @@ public:
         else count = 0;
     }
 
-    SmartPointer(const SmartPointer<T>& newptr)     // конструктор копирования
+    SmartPointer(const SmartPointer<T>& newptr)     // конструктор копирования для sharedptr
     {
         value = newptr.value;
         count = newptr.count;
         if(value != nullptr) 
         {
-            count++;        // если поинтер не нулевой то увеличить каунт
+            count++;        // если поинтер не нулевой то увеличить счетчик ссылок
         }
     }
 
-    ~SmartPointer()     // деструктор с проверкой на кол-во
+    ~SmartPointer()     // деструктор с проверкой на кол-во ссылок
     {
         if(value != nullptr)
         {
             count--;
             if(count == 0) 
             {
-                delete value;
+                delete value;       // тут ошибка
             }
         }
     }
@@ -49,22 +49,9 @@ public:
         return count;
     }
 
-    void reset(T* newptr = nullptr)
+    void reset()
     {
-        if(value != nullptr) 
-        {
-            count--;
-            if(count == 0) 
-            {
-                delete value;
-            }
-        }
-        value = newptr;
-        if (value != nullptr)
-        {
-            count = 1;
-        }
-        else count = 0;
+
     }
 
 };
