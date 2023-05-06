@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/mainnote/_PROG/4gitsync/Cpp_course/lesson16/hw/TextEditor_v2/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\mainnote\\_PROG\\4gitsync\\Cpp_course\\lesson16\\hw\\TextEditor_v2\\main.cpp",
+  "file": "C:/mainnote/_PROG/4gitsync/Cpp_course/lesson16/hw/TextEditor_v2/main.cpp"
+},
+{
+  "directory": "C:/mainnote/_PROG/4gitsync/Cpp_course/lesson16/hw/TextEditor_v2/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\main.dir\\TextEditor.cpp.obj -c C:\\mainnote\\_PROG\\4gitsync\\Cpp_course\\lesson16\\hw\\TextEditor_v2\\TextEditor.cpp",
+  "file": "C:/mainnote/_PROG/4gitsync/Cpp_course/lesson16/hw/TextEditor_v2/TextEditor.cpp"
+}
+]

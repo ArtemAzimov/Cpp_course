@@ -1,0 +1,5 @@
+C:/mainnote/_PROG/4gitsync/Cpp_course/lesson16/hw/TextEditor_v2/build/CMakeFiles/main.dir
+C:/mainnote/_PROG/4gitsync/Cpp_course/lesson16/hw/TextEditor_v2/build/CMakeFiles/package.dir
+C:/mainnote/_PROG/4gitsync/Cpp_course/lesson16/hw/TextEditor_v2/build/CMakeFiles/package_source.dir
+C:/mainnote/_PROG/4gitsync/Cpp_course/lesson16/hw/TextEditor_v2/build/CMakeFiles/edit_cache.dir
+C:/mainnote/_PROG/4gitsync/Cpp_course/lesson16/hw/TextEditor_v2/build/CMakeFiles/rebuild_cache.dir
